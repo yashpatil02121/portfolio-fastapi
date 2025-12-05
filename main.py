@@ -11,7 +11,7 @@ app = FastAPI(title="Portfolio AI Backend")
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://portfolio-yash-patil.vercel.app/",
+    "https://portfolio-yash-patil.vercel.app",
 ]
 
 app.add_middleware(
