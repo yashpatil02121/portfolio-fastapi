@@ -1,0 +1,89 @@
+YASH SANJAY PATIL
+
++91 8828587896 ⋄ Mumbai, India ⋄ yashspatil202002@gmail.com
+
+www.linkedin.com/in/yash-patil-6655b5215/ ⋄ github/yashpatil02121 ⋄ leetcode/yashpatil2121/ ⋄ hackerrank/patilyash02121
+OBJECTIVE
+Full-Stack Software Developer with expertise in front-end and back-end development, AI/ML, and data engineering.
+Experienced in building responsive, scalable, and REST API-driven web and mobile applications using Django, React,
+Vue, Nuxt, Vite, SQL, Supabase, and MongoDB. Published researcher in Springer with proven success in performance
+optimization, cross-functional collaboration, and delivering production-ready solutions.
+EDUCATION
+B.E. in Artificial Intelligence & Data Science with Honours in Cyber Security, University of Mumbai
+Final Sem CGPA : 9.71 / Average CGPA : 8.65 2020 - 2024
+HSC in Computer Science, S.V.P. Junior College of Science
+Percentage : 67.23% 2018 - 2020
+SSC , St. Francis High School
+Percentage : 88.20% 2018
+EXPERIENCE
+Software Developer 12th August 2024 – Present
+At Kulp Labs Pvt Ltd Koparkhairna, Navi Mumbai
+• Designed, developed, and deployed full-stack applications in an Agile environment.
+
+• Engineered and deployed asynchronous backend services using Celery, Django REST Framework, and Pytho-
+nAnywhere.
+
+• Transformed Vue.js applications into cross-platform mobile apps using Capacitor, optimizing app performance
+and user experience.
+• Led frontend performance enhancements for Krafitto by shifting stack to React + Vite, improving load times
+by 35%.
+• Created and maintained UI Builder components for kulp.app, enabling rapid client website deployment.
+Data Science Trainee 2 weeks - June 2022
+In association with MMRDA VCET, Vasai
+Automation Trainee for Siemens S7 1200 PLC 2 weeks - June 2023
+In association with Siemens VCET, Vasai
+PROJECTS
+Kulp.ai & Kulp.app
+Engineered and optimized core functionalities for in-house SaaS platforms through feature development, bug
+resolution, and performance tuning.
+• kulp.ai – AI-powered “prompt-to-website” generator enabling natural language to full-stack application
+conversion using Nuxt.js (frontend) and Supabase (backend).
+
+• kulp.app – Low-code UI Builder enabling drag-and-drop component-based software creation. Devel-
+oped with Nuxt.js (frontend) and MongoDB (backend).
+
+• Delivered REST API integrations, UI/UX improvements, and cross-platform compatibility enhance-
+ments to improve scalability and user experience.
+
+Krafitto App & Kraf One – Admin
+
+Designed and developed a school management platform for preschool institutions with modules for authentica-
+tion, attendance, digital library, fee processing, and role-based dashboards.
+
+• Implemented multi-tenant architecture with multi-role login and school switching.
+• Built and optimized backend models, database schema, and RESTful services using Supabase.
+• Collaborated in an Agile development environment for frontend integration and deployment.
+• Tech stack: React.js, Vite.js, Supabase, REST APIs.
+Urban Ride App & Urban Ride Admin
+Designed, developed, and deployed a city-to-city bus booking platform with an admin control panel for trip,
+route, and payment management.
+• Integrated Ola Maps API for geolocation and route optimization.
+• Integrated Razorpay Payment Gateway for secure, real-time transactions.
+• Delivered responsive UI, database integration, and cross-browser compatibility.
+• Tech stack: React.js, Vite.js, Supabase, REST APIs.
+College Projects
+• Enhanced Routing Efficiency for Educational Networks (VRP) – Implemented vehicle routing optimization
+algorithms in Python to reduce buses by 20%.
+• Student Management System in Django – Developed a role-based academic management system with secure
+authentication, CRUD operations, and PostgreSQL integration.
+• Android Botnet Detection – Built an SVM-based malware classification model using static feature analysis
+of Android applications.
+CERTIFICATIONS
+• Coursera
+– Web Development: Meta - Django Web Framework
+– Python & Data Science: University of Michigan - Programming for Everybody, Python Data Structures,
+IBM - Python for DS, AI & Development, Data Analysis, Statistics, Tools for Data Science
+– Other: Vanderbilt University - Prompt Engineering for ChatGPT
+• HackerRank - Python Basic & SQL Basic
+• TCS ION - Communication Skills & Master Data Management
+PUBLICATION
+ICIACS 2024 Conference - Springer Format
+Paper Name: Enhanced Routing Efficiency for Educational Networks using VRP.
+SKILLS
+Programming Languages Python, JavaScript, HTML5, CSS3, SQL
+Framework & Tools Django REST Framework, React.js, Vue.js, Nuxt.js, Vite.js, Capacitor, Git.
+Database PostgreSQL, MySQL, SQLite, Supabase
+Data Science & AI Machine Learning, Data Visualization, Statistical Analysis, Neural Networks
+EXTRA-CURRICULAR ACTIVITIES
+NSDC Committee Event Head (2023) — CSI Committee Organizing Team Member (2023) — AI&DS Committee
+Technical Team Member (2022)
