@@ -1,33 +1,35 @@
 from fastapi import APIRouter
 from app.models.query import Query
 from app.services.resume import RESUME_TEXT
+from app.services.prompt_builder import build_prompt
+from app.core.prompt_ontology import PROMPT_ONTOLOGY_V1
 from app.core.gemini import model
+from google.api_core.exceptions import ResourceExhausted
 
 router = APIRouter()
 
+
 @router.post("/ask")
 async def ask_portfolio(query: Query):
-    prompt = f"""
-Role:
-You are an AI assistant representing Yash's professional portfolio.
+    prompt = build_prompt(
+        schema=PROMPT_ONTOLOGY_V1,
+        resume_text=RESUME_TEXT,
+        user_query=query.query
+    )
 
-Task:
-Answer the user's question strictly using the provided resume data.
+    try:
+        response = model.generate_content(prompt)
+        return {
+            "response": response.text,
+            "prompt_version": PROMPT_ONTOLOGY_V1["version"]
+        }
 
-Context:
-Resume Data:
-{RESUME_TEXT}
-
-Constraints:
-- Do NOT assume information not present in the resume.
-- If the answer is not found, say "This information is not available in the resume."
-- Keep responses short, clear, and factual.
-
-User Question:
-{query.query}
-
-Output Format:
-Plain text, concise, professional.
-"""
-    response = model.generate_content(prompt)
-    return {"response": response.text}
+    except ResourceExhausted:
+        return {
+            "response": (
+                "The system is temporarily rate-limited due to API usage limits. "
+                "Please try again shortly."
+            ),
+            "prompt_version": PROMPT_ONTOLOGY_V1["version"],
+            "error": "RATE_LIMITED"
+        }
