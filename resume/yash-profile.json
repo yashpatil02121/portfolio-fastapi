@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "subject": "Yash Sanjay Patil",
+    "version": "2.0",
+    "updated": "2026-09",
+    "usage": "Knowledge base for the portfolio chatbot. Inject `profile` into every prompt - it is small. Retrieve 1-3 `chunks` by matching the user question against chunk.q and chunk.tags, then pass only those chunk.text values as context. Every chunk.text is self-contained and names its own subject, so it reads correctly on its own."
+  },
+
+  "profile": {
+    "full_name": "Yash Sanjay Patil",
+    "preferred_name": "Yash Patil",
+    "headline": "Full-Stack Developer",
+    "current_role": "Full Stack Developer at Smarter.Codes (remote), since December 2025",
+    "years_experience": "2+",
+    "location": "Mumbai, Maharashtra, India",
+    "email": "yashspatil202002@gmail.com",
+    "phone": "+91 8828587896",
+    "languages_spoken": ["English", "Hindi", "Marathi"],
+    "links": {
+      "portfolio": "https://portfolio-yash-patil.vercel.app",
+      "github": "https://github.com/yashpatil02121",
+      "linkedin": "https://www.linkedin.com/in/yash-patil-6655b5215/",
+      "leetcode": "https://leetcode.com/u/yashpatil2121/",
+      "hackerrank": "https://www.hackerrank.com/profile/patilyash02121"
+    }
+  },
+
+  "chunks": [
+    {
+      "id": "summary",
+      "topic": "overview",
+      "tags": ["summary", "about", "who is", "introduction", "overview", "bio", "elevator pitch", "experience level"],
+      "q": ["Who is Yash Patil?", "Tell me about Yash", "Give me a summary of his background", "What does Yash do?", "How much experience does he have?"],
+      "text": "Yash Sanjay Patil is a Full-Stack Developer with 2+ years of professional experience building and shipping production web and mobile applications. He works across React and TypeScript frontends, Django, FastAPI and Node.js services, and PostgreSQL, MongoDB and Supabase data layers. He holds a B.E. in Artificial Intelligence and Data Science with Honours in Cyber Security from the University of Mumbai, and is the author of a conference paper on vehicle routing optimization. He is currently a Full Stack Developer at Smarter.Codes and was previously at Kulp Labs Pvt Ltd. He is based in Mumbai, India, and owns features end to end in Agile teams, from architecture decisions through code review and deployment."
+    },
+    {
+      "id": "contact",
+      "topic": "contact",
+      "tags": ["contact", "email", "phone", "reach", "hire", "linkedin", "github", "leetcode", "hackerrank", "portfolio", "links", "location", "where is he based"],
+      "q": ["How do I contact Yash?", "What is his email?", "Where can I find his GitHub?", "Where is he located?", "How do I hire him?"],
+      "text": "Yash Patil is based in Mumbai, Maharashtra, India. Email: yashspatil202002@gmail.com. Phone: +91 8828587896. Portfolio: https://portfolio-yash-patil.vercel.app. GitHub: https://github.com/yashpatil02121. LinkedIn: https://www.linkedin.com/in/yash-patil-6655b5215/. LeetCode: https://leetcode.com/u/yashpatil2121/. HackerRank: https://www.hackerrank.com/profile/patilyash02121. Email is the fastest way to reach him. He speaks English, Hindi and Marathi."
+    },
+
+    {
+      "id": "job-smartercodes",
+      "topic": "experience",
+      "tags": ["smarter.codes", "smartercodes", "current job", "current role", "present", "employer", "where does he work", "remote", "frappe", "makerz", "adr", "jira", "asana"],
+      "q": ["Where does Yash work now?", "What is he doing at Smarter.Codes?", "What is his current job?", "What is he working on right now?"],
+      "text": "Yash Patil is a Full Stack Developer at Smarter.Codes, working remotely since December 2025. This is his current role. He builds and maintains full-stack features across React and TypeScript frontends, Node.js and Python services, REST APIs, and PostgreSQL and MongoDB data layers. He contributes to MakerZ.Network, a role-based learning-to-execution platform that combines structured workflows, guided artifact creation and AI-assisted validation. He authors Architecture Decision Records (ADRs) and writes user stories and acceptance criteria that align product requirements with engineering execution. He delivers in Agile sprints using Jira and Asana, with code review, version control and documentation on every change. Technologies used: React, TypeScript, Node.js, Python, REST APIs, PostgreSQL, MongoDB, Frappe Framework, MariaDB, Redis, Git, GitHub, Jira, Asana."
+    },
+    {
+      "id": "job-kulplabs",
+      "topic": "experience",
+      "tags": ["kulp labs", "kulp", "previous job", "past employer", "navi mumbai", "koparkhairane", "celery", "capacitor", "pythonanywhere", "mentoring", "django rest framework"],
+      "q": ["Where did Yash work before?", "What did he do at Kulp Labs?", "What was his previous role?", "Tell me about his experience at Kulp Labs"],
+      "text": "Yash Patil was a Full Stack Developer at Kulp Labs Pvt Ltd in Koparkhairane, Navi Mumbai, from August 2024 to December 2025. He designed, developed and deployed full-stack web and mobile applications end to end, from database schema and REST APIs through to the deployed frontend. He led the Krafitto frontend migration to React + Vite, rebuilding the component structure and build pipeline to improve page load and local development speed. He engineered asynchronous backend services using Celery, Django REST Framework and Supabase, deployed on PythonAnywhere. He shipped Vue.js and React.js applications as cross-platform mobile builds with Capacitor, and mentored junior developers across multiple SaaS products. Technologies used: Django, Django REST Framework, React, Vue, Nuxt, Vite, Supabase, MongoDB, Celery, Capacitor, PythonAnywhere."
+    },
+    {
+      "id": "training",
+      "topic": "experience",
+      "tags": ["training", "internship", "trainee", "mmrda", "siemens", "plc", "vcet", "vasai", "workshop", "automation"],
+      "q": ["Has Yash done any internships or training?", "What is his Siemens experience?", "Did he do a data science internship?"],
+      "text": "Yash Patil completed two short industry training programs at Vidyavardhini College of Engineering and Technology (VCET), Vasai. In June 2022 he was a Data Science Trainee in association with MMRDA, covering data analysis, machine learning algorithms and statistical modelling with Python, Pandas, NumPy and Scikit-learn. In June 2023 he was an Automation Trainee for the Siemens S7-1200 PLC in association with Siemens, covering industrial automation systems, PLC programming and control system design using TIA Portal, Ladder Logic and HMI design. Each program ran for two weeks."
+    },
+
+    {
+      "id": "project-makerz",
+      "topic": "project",
+      "tags": ["makerz", "makerz.network", "frappe", "doctype", "erp", "mariadb", "redis", "background workers", "business management platform"],
+      "q": ["What is MakerZ.Network?", "Tell me about his Frappe work", "What is he building at Smarter.Codes?"],
+      "text": "MakerZ.Network is a Frappe-based business management platform Yash Patil works on at Smarter.Codes. It is a role-based learning-to-execution platform combining structured workflows, guided artifact creation and AI-assisted validation. He developed and customised it with a modular architecture and role-based functionality: he built custom DocTypes, forms, workflows and business logic for application-specific requirements, developed and integrated REST APIs across the frontend, backend and custom modules, and configured background workers, scheduled jobs and application services for reliable backend processing. Stack: Frappe Framework, Python, JavaScript, MariaDB, Redis, REST APIs. The repository is private company work."
+    },
+    {
+      "id": "project-kulp",
+      "topic": "project",
+      "tags": ["kulp.ai", "kulp.app", "ai website generator", "prompt to website", "low-code", "no-code", "ui builder", "saas", "nuxt", "mongodb"],
+      "q": ["What is kulp.ai?", "What is kulp.app?", "What AI projects has Yash worked on?", "Has he built anything with AI?"],
+      "text": "Kulp.ai and Kulp.app are in-house SaaS platforms Yash Patil engineered and optimised at Kulp Labs through feature development, bug resolution and performance tuning. kulp.ai is an AI-powered prompt-to-website generator that converts natural language into full-stack applications, built with Nuxt.js on the frontend and Supabase on the backend. kulp.app is a low-code UI Builder enabling drag-and-drop, component-based software creation, built with Nuxt.js on the frontend and MongoDB on the backend; he created and maintained its reusable UI Builder components, which enabled rapid client website deployment. Across both he delivered REST API integrations, UI/UX improvements and cross-platform compatibility enhancements. Stack: Nuxt.js, Vue.js, Supabase, MongoDB, REST APIs. These are proprietary Kulp Labs products, so the source is not public."
+    },
+    {
+      "id": "project-krafitto",
+      "topic": "project",
+      "tags": ["krafitto", "kraf one", "school management", "preschool", "multi-tenant", "multi tenant", "attendance", "fee processing", "role-based dashboard", "supabase"],
+      "q": ["What is Krafitto?", "Has Yash built a multi-tenant system?", "Tell me about the school management platform"],
+      "text": "Krafitto App and Kraf One Admin is a multi-tenant school management platform for preschool institutions that Yash Patil designed and developed at Kulp Labs. It covers authentication, attendance, a digital library, fee processing and role-based dashboards. He implemented the multi-tenant architecture with multi-role login and school switching, and built and optimised the backend models, database schema and RESTful services on Supabase. He also led the frontend migration of Krafitto to React + Vite. Stack: React.js, Vite.js, Supabase, REST APIs. The repository is private client work."
+    },
+    {
+      "id": "project-urbanride",
+      "topic": "project",
+      "tags": ["urban ride", "urbanride", "bus booking", "razorpay", "payments", "payment gateway", "ola maps", "geolocation", "route optimization", "travel"],
+      "q": ["What is Urban Ride?", "Has Yash integrated payments?", "Has he worked with maps or geolocation?"],
+      "text": "Urban Ride App and Urban Ride Admin is a city-to-city bus booking platform Yash Patil designed, developed and deployed at Kulp Labs, with an admin control panel for trip, route and payment management. He integrated the Ola Maps API for geolocation and route optimization, and the Razorpay payment gateway for secure, real-time transactions. He delivered a responsive UI, database integration and cross-browser compatibility. Stack: React.js, Vite.js, Supabase, Ola Maps API, Razorpay, REST APIs. The repository is private client work."
+    },
+    {
+      "id": "project-portfolio",
+      "topic": "project",
+      "tags": ["portfolio", "personal website", "this site", "this website", "chatbot", "fastapi", "tailwind", "vite", "side project", "vercel"],
+      "q": ["Did Yash build this website?", "What is this portfolio built with?", "What powers this chatbot?", "Does he have side projects?"],
+      "text": "Yash Patil built and deployed this portfolio site himself using React, TypeScript, Vite and Tailwind CSS, hosted on Vercel at https://portfolio-yash-patil.vercel.app. It includes an integrated AI assistant served by a FastAPI backend that answers questions about his background - that is the assistant answering right now. The site is a personal side project, separate from his professional work."
+    },
+    {
+      "id": "project-vrp",
+      "topic": "project",
+      "tags": ["vrp", "vehicle routing", "route optimization", "buses", "optimization", "academic", "college project", "final year project", "python"],
+      "q": ["What was his final year project?", "Tell me about the vehicle routing project", "What optimization work has he done?"],
+      "text": "Enhanced Routing Efficiency for Educational Networks (VRP) is an academic project by Yash Patil at the University of Mumbai. He implemented vehicle routing optimization algorithms in Python for school bus networks, reducing the number of buses required by 20%. The work was also published as a conference paper at ICIACS 2024. The source is public at https://github.com/yashpatil02121/Enhanced-Routing-Efficiency-for-Educational-Bus-Networks"
+    },
+    {
+      "id": "project-sms",
+      "topic": "project",
+      "tags": ["student management system", "django project", "crud", "postgresql", "academic", "college project", "authentication"],
+      "q": ["Has Yash built anything with Django?", "Tell me about the student management system"],
+      "text": "Student Management System is an academic project by Yash Patil at the University of Mumbai. He developed a role-based academic management system in Django with secure authentication, full CRUD operations and PostgreSQL integration."
+    },
+    {
+      "id": "project-botnet",
+      "topic": "project",
+      "tags": ["android botnet", "malware", "svm", "machine learning", "cyber security", "security project", "classification", "academic"],
+      "q": ["What security work has Yash done?", "Tell me about the malware detection project", "Has he applied machine learning?"],
+      "text": "Android Botnet Detection is an academic project by Yash Patil at the University of Mumbai, tied to his Honours specialisation in Cyber Security. He built an SVM-based malware classification model using static feature analysis of Android applications."
+    },
+
+    {
+      "id": "publication",
+      "topic": "publication",
+      "tags": ["publication", "paper", "research", "iciacs", "conference", "published", "author"],
+      "q": ["Has Yash published any research?", "What is his paper about?", "Does he have publications?"],
+      "text": "Yash Patil authored the paper Enhanced Routing Efficiency for Educational Networks using VRP, presented at ICIACS 2024, the International Conference on Innovative and Advanced Computing Sciences. The paper covers vehicle routing optimization applied to school bus networks - the same work as his final-year project, which reduced the buses required by 20%."
+    },
+    {
+      "id": "education",
+      "topic": "education",
+      "tags": ["education", "degree", "college", "university", "cgpa", "b.e.", "engineering", "mumbai university", "cyber security honours", "ai and data science", "hsc", "ssc"],
+      "q": ["What did Yash study?", "What is his degree?", "What is his CGPA?", "Which university did he attend?"],
+      "text": "Yash Patil holds a B.E. in Artificial Intelligence and Data Science with Honours in Cyber Security from the University of Mumbai, studied from 2020 to 2024. His average CGPA was 8.65 out of 10, with a final semester CGPA of 9.71. Earlier: HSC in Computer Science from S.V.P. Junior College of Science with 67.23% (2018-2020), and SSC from St. Francis High School with 88.20% (2018)."
+    },
+
+    {
+      "id": "skills-engineering",
+      "topic": "skills",
+      "tags": ["skills", "tech stack", "technologies", "languages", "frontend", "backend", "databases", "react", "typescript", "python", "django", "node", "fastapi", "postgresql", "mongodb", "supabase", "does he know"],
+      "q": ["What technologies does Yash know?", "What is his tech stack?", "Does he know React?", "What backend frameworks has he used?", "Which databases has he worked with?"],
+      "text": "Yash Patil's engineering stack. Languages: Python, JavaScript, TypeScript, SQL, HTML5, CSS3. Frontend: React.js, Vue.js, Nuxt.js, Vite.js, Tailwind CSS, Capacitor. Backend: Django REST Framework, FastAPI, Node.js, Celery, Frappe Framework, REST API design. Databases: PostgreSQL, MySQL, SQLite, MongoDB, MariaDB, Redis, Supabase, vector databases. The technologies he reaches for by default are React, TypeScript, Python, Django, Node.js, PostgreSQL and Supabase."
+    },
+    {
+      "id": "skills-ai-tools",
+      "topic": "skills",
+      "tags": ["ai", "machine learning", "data science", "scikit-learn", "pandas", "numpy", "tools", "git", "jira", "agile", "scrum", "soft skills", "how he works", "working style"],
+      "q": ["Does Yash know machine learning?", "What AI skills does he have?", "What tools does he use?", "How does he work in a team?"],
+      "text": "Yash Patil's AI, data and working practices. AI and Data Science: machine learning, Scikit-learn, Pandas, NumPy, data visualization, statistical analysis, neural networks - backed by his B.E. specialisation in AI and Data Science. Tools and practices: Git, GitHub, Jira, Asana, Agile and Scrum delivery, code review, Architecture Decision Records, debugging, API integration, PythonAnywhere. Beyond the code: team collaboration, problem solving, communication and leadership. How he works: understand the existing architecture and business requirement before changing it, own the whole path from interface through API to schema and deploy, and rely on code review, version control and documentation rather than heroics."
+    },
+
+    {
+      "id": "certifications",
+      "topic": "certifications",
+      "tags": ["certifications", "certificates", "coursera", "hackerrank", "tcs ion", "ibm", "meta", "michigan", "vanderbilt", "credentials", "courses"],
+      "q": ["What certifications does Yash have?", "Is he certified in Python?", "What courses has he completed?"],
+      "text": "Yash Patil holds 12 verified certifications. Coursera - Meta: Django Web Framework (https://www.coursera.org/account/accomplishments/certificate/KXTKJUAFAGPM); University of Michigan: Programming for Everybody, Getting Started with Python (https://www.coursera.org/account/accomplishments/verify/T24Z2VMXYTNM) and Python Data Structures (https://www.coursera.org/account/accomplishments/verify/TREURSMY94U4); IBM: Statistics for Data Science with Python (https://www.coursera.org/account/accomplishments/verify/X85E5UN2J7J4), Data Analysis with Python (https://www.coursera.org/account/accomplishments/verify/N2DPJLPMW6W6), Tools for Data Science (https://www.coursera.org/account/accomplishments/verify/8AAQH7Y5V6TT) and Python for Data Science, AI and Development (https://www.coursera.org/account/accomplishments/verify/JYGR3E2DTCT2); Vanderbilt University: Prompt Engineering for ChatGPT (https://www.coursera.org/account/accomplishments/verify/98LGXAJSVN35). HackerRank - SQL Basic (https://www.hackerrank.com/certificates/1d158d9872b2) and Python Basic (https://www.hackerrank.com/certificates/4b37f8d884b8). TCS iON - Communication Skills and Master Data Management for Beginners."
+    },
+    {
+      "id": "extracurricular",
+      "topic": "extracurricular",
+      "tags": ["extracurricular", "committee", "nsdc", "csi", "leadership", "events", "activities", "college activities"],
+      "q": ["What did Yash do outside academics?", "Has he held leadership roles?", "Was he in any college committees?"],
+      "text": "Yash Patil's extra-curricular roles at college: Event Head of the NSDC Committee in 2023, Organising Team Member of the CSI Committee in 2023, and Technical Team Member of the AI and Data Science Committee in 2022."
+    }
+  ]
+}
