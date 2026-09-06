@@ -19,6 +19,7 @@ PROFILE_PATH = os.path.join(BASE_DIR, "resume", "yash-profile.json")
 MAX_CHUNKS = 2
 MIN_SCORE = 6.0          # below this we treat the question as out of scope
 SECOND_CHUNK_RATIO = 0.5  # 2nd chunk only if it is at least half as good as the 1st
+SPECIFIC_DF = 3           # a token in <= this many chunks names a specific topic
 
 _STOPWORDS = {
     "a", "about", "all", "am", "an", "and", "any", "are", "as", "at", "be",
@@ -32,6 +33,11 @@ _STOPWORDS = {
 }
 
 _TOKEN_RE = re.compile(r"[a-z0-9+#.]+")
+
+# Sentence break: a "." after a lowercase/digit and before a new word. Keeps
+# "B.E.", "Smarter.Codes" and "kulp.ai" intact.
+_SENTENCE_END = re.compile(r"(?<=[a-z0-9\)])\.\s+(?=[A-Za-z])")
+HEADLINE_MAX = 280
 
 
 def normalize(text: str) -> str:
@@ -56,6 +62,13 @@ class KnowledgeBase:
         self.chunks = data["chunks"]
         self.by_id = {c["id"]: c for c in self.chunks}
 
+        # One chunk per project and per job, so "what are his projects?" is a
+        # list question that no single chunk answers. Group by topic to build
+        # those list answers locally.
+        self.by_topic = {}
+        for c in self.chunks:
+            self.by_topic.setdefault(c["topic"], []).append(c)
+
         # Pre-compute per-chunk token sets once at startup (not per request).
         self._index = []
         for c in self.chunks:
@@ -79,14 +92,15 @@ class KnowledgeBase:
                 df[tok] = df.get(tok, 0) + 1
         self._idf = {tok: math.log(1 + n / count) for tok, count in df.items()}
 
-        # Tokens that only a handful of chunks are tagged with ("celery",
-        # "django", "razorpay"). Their presence means the question is about a
-        # specific topic, not a one-line profile fact.
-        tag_df = {}
-        for entry in self._index:
-            for tok in entry["tag_tokens"]:
-                tag_df[tok] = tag_df.get(tok, 0) + 1
-        self.specific_tokens = {t for t, c in tag_df.items() if c <= 3}
+        # Tokens only a handful of chunks mention at all ("celery", "vue",
+        # "razorpay"). Naming one means the visitor is asking about that
+        # specific thing, not for a profile field or a topic list.
+        self.specific_tokens = {t for t, count in df.items() if count <= SPECIFIC_DF}
+
+        # Every word the profile talks about at all. A list question ("his
+        # projects") must contain none of these beyond its own framing - "his
+        # React projects" is a question about React.
+        self.vocabulary = set(df)
         self.tag_tokens = {e["id"]: e["tag_tokens"] for e in self._index}
 
         self.profile_card = self._build_profile_card()
@@ -102,6 +116,26 @@ class KnowledgeBase:
             f"{p['years_experience']} years experience. {p['current_role']}. "
             f"Based in {p['location']}."
         )
+
+    @staticmethod
+    def headline(chunk: dict) -> str:
+        """First sentence of a chunk - one line for a list answer."""
+        first = _SENTENCE_END.split(chunk["text"], maxsplit=1)[0].strip().rstrip(".")
+        if len(first) > HEADLINE_MAX:
+            first = first[:HEADLINE_MAX].rsplit(" ", 1)[0] + "..."
+        return first
+
+    def overview(self, topics, lead: str) -> str:
+        """A bullet list built from the chunks under these topics."""
+        chunks = [c for topic in topics for c in self.by_topic.get(topic, [])]
+        if not chunks:
+            return ""
+        lines = []
+        for c in chunks:
+            line = self.headline(c)
+            lines.append(f"- {line}" if line.endswith("...") else f"- {line}.")
+        bullets = "\n".join(lines)
+        return f"{lead.format(n=len(chunks))}\n{bullets}"
 
     def search(self, query: str, max_chunks: int = MAX_CHUNKS):
         """Return [(chunk, score)] for the best-matching chunks, best first."""
